@@ -35,8 +35,13 @@ ostream & operator << (ostream &out,const Harta &h)
 int** Harta::getHarta()
 {
     return harta;
+    cout<<"Mesaj special ";
 }
 
+void Harta::Modify(int i,int j)
+{
+    harta[i][j]=1;
+}
 
 Harta::~Harta()
 {

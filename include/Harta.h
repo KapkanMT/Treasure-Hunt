@@ -9,9 +9,11 @@ class Harta
     int **harta;
 
     public:
+        friend class ExplorerOne;
         Harta();
         virtual ~Harta();
         friend ostream & operator << (ostream &out,const Harta &h);
+        void Modify(int,int);
         int** getHarta();
 
 };

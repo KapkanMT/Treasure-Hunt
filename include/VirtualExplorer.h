@@ -9,8 +9,9 @@ class VirtualExplorer
 
     public:
         VirtualExplorer();
-        virtual int movecheck()=0;
+        virtual int** movecheck()=0;
         virtual void Move(int,int)=0;
+        virtual void MoveDecider()=0;
         virtual ~VirtualExplorer()=0;
 };
 
