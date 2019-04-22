@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1555968389 source:c:\users\pc\documents\github\treasure hunt\main.cpp
+	<iostream>
+	"Harta.h"
+
+1555969757 source:c:\users\pc\documents\github\treasure hunt\src\harta.cpp
+	"Harta.h"
+
+1555969584 c:\users\pc\documents\github\treasure hunt\include\harta.h
+	<iostream>
+

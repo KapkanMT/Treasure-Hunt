@@ -1,14 +1,12 @@
 #include <iostream>
+#include "Harta.h"
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
-    cout << "Hello world!" << endl;
-    cout << "Hello world!" << endl;
-    cout << "Hello world!" << endl;
-    cout << "Hello world!" << endl;
-    cout << "Hello world!" << endl;
+    Harta h;
+    cout<<h;
+
     return 0;
 }
