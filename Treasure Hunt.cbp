@@ -34,9 +34,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/ExplorerOne.h" />
 		<Unit filename="include/Harta.h" />
 		<Unit filename="include/VirtualExplorer.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/ExplorerOne.cpp" />
 		<Unit filename="src/Harta.cpp" />
 		<Unit filename="src/VirtualExplorer.cpp" />
 		<Extensions>

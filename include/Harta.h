@@ -12,6 +12,7 @@ class Harta
         Harta();
         virtual ~Harta();
         friend ostream & operator << (ostream &out,const Harta &h);
+        int** getHarta();
 
 };
 

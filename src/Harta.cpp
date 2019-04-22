@@ -32,6 +32,11 @@ ostream & operator << (ostream &out,const Harta &h)
     return out;
 }
 
+int** Harta::getHarta()
+{
+    return harta;
+}
+
 
 Harta::~Harta()
 {

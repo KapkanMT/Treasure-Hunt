@@ -3,9 +3,15 @@
 	<iostream>
 	"Harta.h"
 
-1555969757 source:c:\users\pc\documents\github\treasure hunt\src\harta.cpp
+1555972503 source:c:\users\pc\documents\github\treasure hunt\src\harta.cpp
 	"Harta.h"
 
-1555969584 c:\users\pc\documents\github\treasure hunt\include\harta.h
+1555972530 c:\users\pc\documents\github\treasure hunt\include\harta.h
+	<iostream>
+
+1555970721 source:c:\users\pc\documents\github\treasure hunt\src\virtualexplorer.cpp
+	"VirtualExplorer.h"
+
+1555972586 c:\users\pc\documents\github\treasure hunt\include\virtualexplorer.h
 	<iostream>
 
