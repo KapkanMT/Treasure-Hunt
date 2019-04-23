@@ -12,9 +12,9 @@ class ExplorerOne : public VirtualExplorer
     public:
         friend class Harta;
         ExplorerOne();
-        int** movecheck();
-        void MoveDecider();
-        void Move(int,int);
+        int** movecheck(Harta);
+        void MoveDecider(Harta&);
+        void Move(int,int,Harta);
         virtual ~ExplorerOne();
 };
 

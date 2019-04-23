@@ -4,13 +4,15 @@
 
 using namespace std;
 
+
 class VirtualExplorer
 {
-
+    int linpos;
+    int colpos;
     public:
         VirtualExplorer();
         virtual int** movecheck()=0;
-        virtual void Move(int,int)=0;
+        virtual void Move()=0;
         virtual void MoveDecider()=0;
         virtual ~VirtualExplorer()=0;
 };

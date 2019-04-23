@@ -6,9 +6,9 @@ ExplorerOne::ExplorerOne()
     colpos=1;
 }
 
-int** ExplorerOne::movecheck()
+int** ExplorerOne::movecheck(Harta h)//TREBUIE SA TRIMIT HARTA PRIN FUNCTIE
 {
-    Harta h;
+    ExplorerOne Ex1();
     int i,j,k,l;
     int** movelist=new int*[9];
     for (i=0;i<1;i++)
@@ -38,14 +38,13 @@ int** ExplorerOne::movecheck()
 
 void ExplorerOne::Move(int i,int j)
 {
-    Harta h;
-    h.Modify(i+linpos,j+linpos);
+    ExplorerOne Ex1;
+    h.Modify(i+Ex1.linpos,j+Ex1.linpos);
 }
 
-void ExplorerOne::MoveDecider()
+void ExplorerOne::MoveDecider(Harta &h)
 {
     int l,m;
-    Harta h;
     int** movelist=new int*[9];
 
     for (int i=0;i<1;i++)
