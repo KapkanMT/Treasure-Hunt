@@ -97,7 +97,7 @@ void ExplorerFour::MoveDecider(Harta &h)
                     break;
                     case 2:l=0;m=-1;s++;
                     break;
-                    case 3:l=0;m=-1;s++;
+                    case 3:l=-1;m=-0;s++;
                     break;
                 }
             }

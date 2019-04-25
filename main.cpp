@@ -5,7 +5,10 @@
 #include "ExplorerThree.h"
 #include "ExplorerFour.h"
 
-
+//statusHolder tine statusurile fiecarui explorator
+//0=poate cauta
+//1=e blocat
+//2=a gasit o comoara
 using namespace std;
 
 int main()
@@ -20,20 +23,22 @@ int main()
     ExplorerFour Ex4;
     cout<<"\n"<<"Pentru a face procesu pas cu pas,scrieti un int"<<"\n";
     cout<<"Altfel,scrieti orice.";
+    cout<<"Treasures=4";
     while (c<3)
     {
         cin>>i;
         cout<<"\n";
-        Ex1.MoveDecider(h);
-        Ex2.MoveDecider(h);
-        Ex3.MoveDecider(h);
-        Ex4.MoveDecider(h);
+        Ex1.MoveDecider(h);//misca pe Explorator1
+        Ex2.MoveDecider(h);//misca pe Explorator2
+        Ex3.MoveDecider(h);//misca pe Explorator3
+        Ex4.MoveDecider(h);//misca pe Explorator4
         cout<<"\n";
         cout<<"Explorer1=6:"<<Ex1.getlinpos()<<" "<<Ex1.getcolpos()<<"\n";
         cout<<"Explorer2=7:"<<Ex2.getlinpos()<<" "<<Ex2.getcolpos()<<"\n";
         cout<<"Explorer3=8:"<<Ex3.getlinpos()<<" "<<Ex3.getcolpos()<<"\n";
         cout<<"Explorer4=9:"<<Ex3.getlinpos()<<" "<<Ex4.getcolpos()<<"\n";
         cout<<h;
+        //contorized daca un explorator s-a blocat sau a gasit o comoara
         if (h.getStatusHolder()[0]!=0 & x1==0)
         {
             x1==1;

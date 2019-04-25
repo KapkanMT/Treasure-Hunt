@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1556212408 source:c:\users\pc\documents\github\treasure hunt\main.cpp
+1556229250 source:c:\users\pc\documents\github\treasure hunt\main.cpp
 	<iostream>
 	"Harta.h"
 	"ExplorerOne.h"
@@ -10,7 +10,7 @@
 1556212530 source:c:\users\pc\documents\github\treasure hunt\src\harta.cpp
 	"Harta.h"
 
-1556209593 c:\users\pc\documents\github\treasure hunt\include\harta.h
+1556229250 c:\users\pc\documents\github\treasure hunt\include\harta.h
 	<iostream>
 	<stdio.h>
 	<stdlib.h>
@@ -19,7 +19,7 @@
 1556120839 source:c:\users\pc\documents\github\treasure hunt\src\virtualexplorer.cpp
 	"VirtualExplorer.h"
 
-1556207768 c:\users\pc\documents\github\treasure hunt\include\virtualexplorer.h
+1556229000 c:\users\pc\documents\github\treasure hunt\include\virtualexplorer.h
 	<iostream>
 	"Harta.h"
 
@@ -51,7 +51,7 @@
 	"VirtualExplorer.h"
 	"Harta.h"
 
-1556211715 source:c:\users\pc\documents\github\treasure hunt\src\explorerfour.cpp
+1556229066 source:c:\users\pc\documents\github\treasure hunt\src\explorerfour.cpp
 	"ExplorerFour.h"
 	<stdio.h>
 	<stdlib.h>

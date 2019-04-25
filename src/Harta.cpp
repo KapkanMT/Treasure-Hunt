@@ -145,7 +145,7 @@ void Harta::treasureGenerator(int &i,int &j)
         x=x-3;
         y=y+12;
     }
-    cout<<"Comoara1:"<<x<<" "<<y<<"\n";
+    cout<<"Comoara:"<<x<<" "<<y<<"\n";
     harta[x][y]=4;
     i=x;
     j=y;

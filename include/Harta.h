@@ -19,18 +19,18 @@ class Harta
         friend class ExplorerFour;
         Harta();
         virtual ~Harta();
-        friend ostream & operator << (ostream &out,const Harta &h);
-        int* & operator[](const int);
-        void Modify(int,int);
-        int* getStatusHolder();
-        void setStatusHolder(int*);
-        void ModifyE1(int,int);
-        void ModifyE2(int,int);
-        void ModifyE3(int,int);
-        void ModifyE4(int,int);
-        int Randomgenspecial();
-        void treasureGenerator(int&,int&);
-        void statusModifier(int*,int,int);
+        friend ostream & operator << (ostream &out,const Harta &h);//scrie harta
+        int* & operator[](const int);//returneaza harta[i][j]
+        void Modify(int,int);//modifica pozitia e care a fost un explorator cu 1
+        int* getStatusHolder();//returneaza statusHolder
+        void setStatusHolder(int*);//seteaza statusHolder
+        void ModifyE1(int,int);//muta Explorator1 vizual
+        void ModifyE2(int,int);//muta Explorator2 vizual
+        void ModifyE3(int,int);//muta Explorator3 vizual
+        void ModifyE4(int,int);//muta Explorator4 vizual
+        int Randomgenspecial();//randomnr cu niste exceptii
+        void treasureGenerator(int&,int&);//generaza comorile
+        void statusModifier(int*,int,int);//modifca statusHolder
 
 };
 
