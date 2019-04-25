@@ -1,33 +1,36 @@
-#include "ExplorerOne.h"
+#include "ExplorerTwo.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-ExplorerOne::ExplorerOne()
+ExplorerTwo::ExplorerTwo()
 {
     linpos=1;
-    colpos=1;
+    colpos=15;
     freeze=0;
 }
 
-int ExplorerOne::getlinpos()
+int ExplorerTwo::getlinpos()
 {
     return linpos;
 }
 
-int ExplorerOne::getcolpos()
+int ExplorerTwo::getcolpos()
 {
     return colpos;
 }
 
-void ExplorerOne::modifylinpos(int i)
-{
-    this->linpos=i;
-}
-
-void ExplorerOne::modifycolpos(int i)
+void ExplorerTwo::modifycolpos(int i)
 {
     this->colpos=i;
 }
 
-int** ExplorerOne::movecheck(Harta h)
+void ExplorerTwo::modifylinpos(int i)
+{
+    this->linpos=i;
+}
+
+int** ExplorerTwo::movecheck(Harta h)
 {
     int lin=getlinpos();
     int col=getcolpos();
@@ -35,7 +38,7 @@ int** ExplorerOne::movecheck(Harta h)
     int** movelist=new int*[9];
     for (i=0;i<9;i++)
     {
-        movelist[i]=new int[i];
+        movelist[i]=new int[2];
     }
     k=0;
     movelist[0][0]=movelist[0][1]=2;
@@ -53,16 +56,16 @@ int** ExplorerOne::movecheck(Harta h)
     return movelist;
 }
 
-void ExplorerOne::Move(int i,int j,Harta h)
+void ExplorerTwo::Move(int i,int j,Harta h)
 {
     int lin=getlinpos();
     int col=getcolpos();
     h.Modify(i+lin,j+col);
 }
 
-void ExplorerOne::MoveDecider(Harta &h)
+void ExplorerTwo::MoveDecider(Harta &h)
 {
-    int l,m;
+    int l,m,randomnr,contor=0;
     int** movelist=new int*[9];
     if (freeze==0)
     {
@@ -76,14 +79,14 @@ void ExplorerOne::MoveDecider(Harta &h)
         movelist=movecheck(h);
         if (movelist[0][0]==2)
         {
-            h.statusModifier(h.getStatusHolder(),1,1);
+            h.statusModifier(h.getStatusHolder(),1,2);
             delete this;
             return;
         }
-
-        for (int k=0;k<4;k++)
+        randomnr = rand()%8;
+        while (contor<8)
         {
-            switch (k)
+            switch (randomnr)
             {
                 case 0:l=0;m=1;
                 break;
@@ -92,6 +95,14 @@ void ExplorerOne::MoveDecider(Harta &h)
                 case 2:l=0;m=-1;
                 break;
                 case 3:l=0;m=-1;
+                break;
+                case 4:l=-1;m=-1;
+                break;
+                case 5:l=-1;m=1;
+                break;
+                case 6:l=1;m=-1;
+                break;
+                case 7:l=1;m=1;
                 break;
             }
             for (int i=0;i<8;i++)
@@ -105,19 +116,19 @@ void ExplorerOne::MoveDecider(Harta &h)
                     modifylinpos(lin);
                     if (h.harta[lin][col]==4)
                     {
-                        h.statusModifier(h.getStatusHolder(),2,1);
+                        h.statusModifier(h.getStatusHolder(),2,2);
                         delete this;
                     }
-                    h.ModifyE1(lin,col);
+                    h.ModifyE2(lin,col);
                     return;
                 }
             }
+            contor++;
         }
     }
-
 }
 
-ExplorerOne::~ExplorerOne()
+ExplorerTwo::~ExplorerTwo()
 {
     this->freeze=1;
 }

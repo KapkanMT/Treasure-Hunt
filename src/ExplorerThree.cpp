@@ -1,33 +1,33 @@
-#include "ExplorerOne.h"
+#include "ExplorerThree.h"
 
-ExplorerOne::ExplorerOne()
+ExplorerThree::ExplorerThree()
 {
-    linpos=1;
-    colpos=1;
+    linpos=15;
+    colpos=15;
     freeze=0;
 }
 
-int ExplorerOne::getlinpos()
+int ExplorerThree::getlinpos()
 {
     return linpos;
 }
 
-int ExplorerOne::getcolpos()
+int ExplorerThree::getcolpos()
 {
     return colpos;
 }
 
-void ExplorerOne::modifylinpos(int i)
-{
-    this->linpos=i;
-}
-
-void ExplorerOne::modifycolpos(int i)
+void ExplorerThree::modifycolpos(int i)
 {
     this->colpos=i;
 }
 
-int** ExplorerOne::movecheck(Harta h)
+void ExplorerThree::modifylinpos(int i)
+{
+    this->linpos=i;
+}
+
+int** ExplorerThree::movecheck(Harta h)
 {
     int lin=getlinpos();
     int col=getcolpos();
@@ -53,16 +53,16 @@ int** ExplorerOne::movecheck(Harta h)
     return movelist;
 }
 
-void ExplorerOne::Move(int i,int j,Harta h)
+void ExplorerThree::Move(int i,int j,Harta h)
 {
     int lin=getlinpos();
     int col=getcolpos();
     h.Modify(i+lin,j+col);
 }
 
-void ExplorerOne::MoveDecider(Harta &h)
+void ExplorerThree::MoveDecider(Harta &h)
 {
-    int l,m;
+    int l,m,cond=0;
     int** movelist=new int*[9];
     if (freeze==0)
     {
@@ -76,28 +76,29 @@ void ExplorerOne::MoveDecider(Harta &h)
         movelist=movecheck(h);
         if (movelist[0][0]==2)
         {
-            h.statusModifier(h.getStatusHolder(),1,1);
+            h.statusModifier(h.getStatusHolder(),1,3);
             delete this;
             return;
         }
-
         for (int k=0;k<4;k++)
         {
             switch (k)
             {
-                case 0:l=0;m=1;
+                case 0:l=-1;m=-1;
                 break;
-                case 1:l=1;m=0;
+                case 1:l=-1;m=1;
                 break;
-                case 2:l=0;m=-1;
+                case 2:l=1;m=-1;
                 break;
-                case 3:l=0;m=-1;
+                case 3:l=1;m=1;
                 break;
             }
+
             for (int i=0;i<8;i++)
             {
                 if ((movelist[i][0]==l) & (movelist[i][1]==m))
                 {
+                    cond=1;
                     h.Modify(lin,col);
                     lin=lin+l;
                     col=col+m;
@@ -105,19 +106,18 @@ void ExplorerOne::MoveDecider(Harta &h)
                     modifylinpos(lin);
                     if (h.harta[lin][col]==4)
                     {
-                        h.statusModifier(h.getStatusHolder(),2,1);
+                        h.statusModifier(h.getStatusHolder(),2,3);
                         delete this;
                     }
-                    h.ModifyE1(lin,col);
+                    h.ModifyE3(lin,col);
                     return;
                 }
             }
         }
     }
-
 }
 
-ExplorerOne::~ExplorerOne()
+ExplorerThree::~ExplorerThree()
 {
     this->freeze=1;
 }

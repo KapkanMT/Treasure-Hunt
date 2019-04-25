@@ -1,18 +1,17 @@
-#ifndef EXPLORERONE_H
-#define EXPLORERONE_H
+#ifndef EXPLORERTHREE_H
+#define EXPLORERTHREE_H
 #include "VirtualExplorer.h"
 #include "Harta.h"
 
-class ExplorerOne : public VirtualExplorer
+class ExplorerThree : public VirtualExplorer
 {
-
     int linpos;
     int colpos;
     int freeze;
 
     public:
         friend class Harta;
-        ExplorerOne();
+        ExplorerThree();
         int getlinpos();
         int getcolpos();
         void modifylinpos(int);
@@ -20,7 +19,7 @@ class ExplorerOne : public VirtualExplorer
         int** movecheck(Harta);
         void MoveDecider(Harta&);
         void Move(int,int,Harta);
-        virtual ~ExplorerOne();
+        virtual ~ExplorerThree();
 };
 
-#endif // EXPLORERONE_H
+#endif // EXPLORERTHREE_H

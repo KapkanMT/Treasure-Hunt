@@ -34,14 +34,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/ExplorerFour.h" />
 		<Unit filename="include/ExplorerOne.h" />
 		<Unit filename="include/ExplorerThree.h" />
 		<Unit filename="include/ExplorerTwo.h" />
 		<Unit filename="include/Harta.h" />
 		<Unit filename="include/VirtualExplorer.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/ExplorerFour.cpp" />
 		<Unit filename="src/ExplorerOne.cpp" />
 		<Unit filename="src/ExplorerThree.cpp" />
 		<Unit filename="src/ExplorerTwo.cpp" />

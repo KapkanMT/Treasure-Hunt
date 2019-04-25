@@ -1,25 +1,59 @@
 # depslib dependency file v1.0
-1556020916 source:c:\users\pc\documents\github\treasure hunt\main.cpp
+1556212408 source:c:\users\pc\documents\github\treasure hunt\main.cpp
 	<iostream>
 	"Harta.h"
 	"ExplorerOne.h"
+	"ExplorerTwo.h"
+	"ExplorerThree.h"
+	"ExplorerFour.h"
 
-1555979972 source:c:\users\pc\documents\github\treasure hunt\src\harta.cpp
+1556212530 source:c:\users\pc\documents\github\treasure hunt\src\harta.cpp
 	"Harta.h"
 
-1555979155 c:\users\pc\documents\github\treasure hunt\include\harta.h
+1556209593 c:\users\pc\documents\github\treasure hunt\include\harta.h
 	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
 
-1556021478 source:c:\users\pc\documents\github\treasure hunt\src\virtualexplorer.cpp
+1556120839 source:c:\users\pc\documents\github\treasure hunt\src\virtualexplorer.cpp
 	"VirtualExplorer.h"
 
-1556023775 c:\users\pc\documents\github\treasure hunt\include\virtualexplorer.h
+1556207768 c:\users\pc\documents\github\treasure hunt\include\virtualexplorer.h
 	<iostream>
+	"Harta.h"
 
-1556018292 source:c:\users\pc\documents\github\treasure hunt\src\explorerone.cpp
+1556211715 source:c:\users\pc\documents\github\treasure hunt\src\explorerone.cpp
 	"ExplorerOne.h"
 
-1556020986 c:\users\pc\documents\github\treasure hunt\include\explorerone.h
+1556211464 c:\users\pc\documents\github\treasure hunt\include\explorerone.h
 	"VirtualExplorer.h"
 	"Harta.h"
+
+1556211045 c:\users\pc\documents\github\treasure hunt\include\explorertwo.h
+	"VirtualExplorer.h"
+	"Harta.h"
+
+1556211715 source:c:\users\pc\documents\github\treasure hunt\src\explorertwo.cpp
+	"ExplorerTwo.h"
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1556211264 c:\users\pc\documents\github\treasure hunt\include\explorerthree.h
+	"VirtualExplorer.h"
+	"Harta.h"
+
+1556211715 source:c:\users\pc\documents\github\treasure hunt\src\explorerthree.cpp
+	"ExplorerThree.h"
+
+1556211464 c:\users\pc\documents\github\treasure hunt\include\explorerfour.h
+	"VirtualExplorer.h"
+	"Harta.h"
+
+1556211715 source:c:\users\pc\documents\github\treasure hunt\src\explorerfour.cpp
+	"ExplorerFour.h"
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
 
